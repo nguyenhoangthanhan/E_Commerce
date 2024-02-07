@@ -43,6 +43,7 @@ dependencies:
 
   get: ^4.6.5
   get_storage: ^2.1.1
+  logger: ^2.0.2+1
 
 dev_dependencies:
   flutter_test:
