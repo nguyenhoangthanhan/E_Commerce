@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app3/features/authentication/screens/onboarding.dart';
 import 'package:t_store_app3/utils/theme/theme.dart';
 
 /// -- Use this class to setup themes, initial Bindings, any animations and much more
@@ -11,6 +12,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      home: const OnBoardingScreen(),
     );
   }
 }

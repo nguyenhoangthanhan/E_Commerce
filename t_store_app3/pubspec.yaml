@@ -44,6 +44,8 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.1.1
   logger: ^2.0.2+1
+  flutter_native_splash: ^2.3.10
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -121,3 +123,17 @@ flutter:
           weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 800
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#272727"
+  image: assets/logos/supermaket_black.png
+  image_dark: assets/logos/supermaket_white.png
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: assets/logos/supermaket_black.png
+    image_dark: assets/logos/supermaket_white.png
+
+  web: false
