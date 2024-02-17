@@ -36,15 +36,15 @@ class TTexts {
   static const String resendEmailIn = "Resend email in";
 
 
-// -- Authentication Form Text
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
-  static const String resendEmailIn = "";
+// -- Authentication Headings Text
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
+  static const String signUpTitle = "Let's create your account";
+  static const String forgetPasswordTitle = "Forget password";
+  static const String forgetPasswordSubTitle = "Don't worry sometime people can forget too, enter your email and we will send you a password reset link.";
+  static const String confirmEmail = "Verify your email address!";
+  static const String confirmEmailSubTitle = "Congratulation! Your Account Awaits: Verify Your Email to start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+  static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
+  static const String yourAccountCreatedTitle = "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Your account is created. Unleash the Joy of seamless Online Shopping!";
 }
