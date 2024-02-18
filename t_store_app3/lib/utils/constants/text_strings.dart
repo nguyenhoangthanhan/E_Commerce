@@ -35,7 +35,6 @@ class TTexts {
   static const String verificationCode = "Verification code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
-  static const String tContinue = "Continue";
 
 
 // -- Authentication Headings Text
@@ -49,4 +48,9 @@ class TTexts {
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Your account is created. Unleash the Joy of seamless Online Shopping!";
+  static const String changeYourPasswordTitle = "Password Reset Email Sent";
+  static const String changeYourPasswordSubTitle = "Your Account security is Our Priority! We've sent you a secure link to safety change your password and keep your account protected.";
+  static const String tContinue = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
 }
