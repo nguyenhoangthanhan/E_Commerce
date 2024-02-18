@@ -43,5 +43,11 @@ class TColors {
   static const Color borderSecondary = Color(0xFFE6E6E6);
 
   static const Color darkGrey = Color(0xFFBAC0C7);
-  static const Color grey = Color(0xFF6C757D);
+  static const Color grey = Colors.grey;
+
+  static const Color warning = Colors.orange;
+  static const Color error = Colors.red;
+
+  static const Color black = Colors.black;
+  static const Color white = Colors.white;
 }
