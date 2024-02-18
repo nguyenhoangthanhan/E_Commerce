@@ -35,6 +35,7 @@ class TTexts {
   static const String verificationCode = "Verification code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String tContinue = "Continue";
 
 
 // -- Authentication Headings Text
