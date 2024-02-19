@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:t_store_app3/common/custom_shapes/curved_edges/curved_edges.dart';
+import 'package:t_store_app3/utils/constants/colors.dart';
+
+import '../../../../common/custom_shapes/containers/circular_container.dart';
+import '../../../../common/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/custom_shapes/curved_edges/curved_edges_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,7 +12,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TPrimaryHeaderContainer(
+              child: Column(
+                children: [
 
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
