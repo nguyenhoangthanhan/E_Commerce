@@ -12,14 +12,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      appBar: Container(),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            /// Header -- Tutorial [Section = 3, video #2]
             TPrimaryHeaderContainer(
-              child: Column(
-                children: [
+              child: Container(
 
-                ],
               ),
             )
           ],
