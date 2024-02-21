@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:t_store_app3/common/custom_shapes/curved_edges/curved_edges.dart';
-import 'package:t_store_app3/utils/constants/colors.dart';
+import 'package:t_store_app3/features/shop/screens/home/widgets/home_app_bar.dart';
 
-import '../../../../common/custom_shapes/containers/circular_container.dart';
 import '../../../../common/custom_shapes/containers/primary_header_container.dart';
-import '../../../../common/custom_shapes/curved_edges/curved_edges_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,14 +9,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: Container(),
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header -- Tutorial [Section = 3, video #2]
             TPrimaryHeaderContainer(
-              child: Container(
+              child: Column(
+                children: [
+                  /// -- AppBar
+                  THomeAppBar(),
 
+                  /// -- Search bar
+
+
+                  /// -- Categories
+                ],
               ),
             )
           ],

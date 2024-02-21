@@ -35,15 +35,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                 backgroundColor: TColors.textWhite.withOpacity(0.1),
               ),
             ),
-            // Column(
-            //   children: [
-            //     /// Appbar
-            //
-            //     /// Search bar
-            //
-            //     /// Categories
-            //   ],
-            // )
+            child
           ],
         ),
       ),
