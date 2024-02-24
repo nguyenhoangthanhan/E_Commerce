@@ -1,13 +1,12 @@
-
-
 import 'package:flutter/material.dart';
 
-import '../../../utils/constants/colors.dart';
+import '../../../../utils/constants/colors.dart';
 import 'curved_edges.dart';
 
 class TCurvedEdgeWidget extends StatelessWidget {
   const TCurvedEdgeWidget({
-    super.key, this.child,
+    super.key,
+    this.child,
   });
 
   final Widget? child;
