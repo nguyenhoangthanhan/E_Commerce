@@ -31,4 +31,8 @@ class TImages{
   static const String toyIcon = "assets/icons/categories/toy-car.png";
   static const String furnitureIcon = "assets/icons/categories/dining-chair.png";
   static const String jeweleryIcon = "assets/icons/categories/sparking-diamond.png";
+
+  static const String promoBanner1 = "assets/images/banners/banner-1.png";
+  static const String promoBanner2 = "assets/images/banners/banner-2.png";
+  static const String promoBanner3 = "assets/images/banners/banner-3.png";
 }
