@@ -103,8 +103,8 @@ flutter:
   assets:
     - assets/logos/
     - assets/icons/brands/
-    - assets/images/
     - assets/images/on_boarding_images/
+    - assets/icons/categories/
     - assets/images/animations/
 
   fonts:

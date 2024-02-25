@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:t_store_app3/features/shop/screens/home/widgets/home_app_bar.dart';
+import 'package:t_store_app3/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,7 +14,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -20,31 +23,36 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// -- AppBar
-                  const THomeAppBar(),
-                  const SizedBox(
+                  THomeAppBar(),
+                  SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   /// -- Search bar
-                  const TSearchContainer(
+                  TSearchContainer(
                     text: 'Search in Store',
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   /// -- Categories
                   Padding(
-                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
+                        /// -- Heading
                         TSectionHeading(
                           title: 'Popular Categories',
                           showActionButton: false,
+                          textColor: Colors.white,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
+
+                        /// -- Categories
+                        THomeCategories(),
                       ],
                     ),
                   )
