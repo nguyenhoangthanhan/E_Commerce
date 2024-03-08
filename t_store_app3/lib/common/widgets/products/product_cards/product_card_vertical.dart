@@ -7,6 +7,8 @@ import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
 
+import '../../icons/t_circular_icon.dart';
+
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
 
@@ -33,13 +35,29 @@ class TProductCardVertical extends StatelessWidget {
             child: Stack(
               children: [
                 /// -- Thumbnail Image
-                const TRoundedImage(imageUrl: TImages.promoBanner1, applyImageRadius: true),
+                const TRoundedImage(
+                    imageUrl: TImages.promoBanner1, applyImageRadius: true),
 
                 /// -- Sale Tag
-                TRoundedContainer(
-                  radius: TSizes.sm,
-                  backgroundColor: TColors.secondary.withOpacity(0.8),
-                )
+                Positioned(
+                  top: 12,
+                  child: TRoundedContainer(
+                    radius: TSizes.sm,
+                    backgroundColor: TColors.secondary.withOpacity(0.8),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: TSizes.sm, vertical: TSizes.xs),
+                    child: Text(
+                      '25%',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelLarge!
+                          .apply(color: TColors.black),
+                    ),
+                  ),
+                ),
+
+                /// -- Favourite Icon Button
+                TCircularIcon(dark: dark)
               ],
             ),
           )
