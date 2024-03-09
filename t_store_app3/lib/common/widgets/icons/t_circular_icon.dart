@@ -4,6 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../utils/constants/colors.dart';
 
 class TCircularIcon extends StatelessWidget {
+  /// Custom circular
   const TCircularIcon({
     super.key,
     required this.dark,
