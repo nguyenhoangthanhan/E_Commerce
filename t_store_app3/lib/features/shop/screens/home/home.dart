@@ -1,18 +1,14 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:t_store_app3/common/widgets/custom_shapes/containers/circular_container.dart';
-import 'package:t_store_app3/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:t_store_app3/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:t_store_app3/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store_app3/features/shop/screens/home/widgets/promo_slider.dart';
-import 'package:t_store_app3/utils/constants/colors.dart';
 import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
-import '../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             /// Header -- Tutorial [Section = 3, video #2]
-            const TPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// -- AppBar
@@ -68,7 +64,7 @@ class HomeScreen extends StatelessWidget {
 
             /// Body
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   /// -- Promo slider
@@ -81,7 +77,10 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   /// -- Popular products
-                  TProductCardVertical(),
+                  TGridLayout(
+                    itemCount: 6,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
                 ],
               ),
             )
