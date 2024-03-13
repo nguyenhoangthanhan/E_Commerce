@@ -98,6 +98,10 @@ class TProductCardVertical extends StatelessWidget {
                           color: TColors.primary, size: TSizes.iconXs),
                     ],
                   ),
+
+                  const Spacer(),
+
+                  /// Price row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
