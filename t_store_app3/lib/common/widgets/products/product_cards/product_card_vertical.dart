@@ -3,13 +3,16 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app3/common/styles/shadows.dart';
 import 'package:t_store_app3/common/widgets/containers/rounded_container.dart';
 import 'package:t_store_app3/common/widgets/images/t_rounded_image.dart';
+import 'package:t_store_app3/common/widgets/texts/t_brand_title_text.dart';
 import 'package:t_store_app3/utils/constants/colors.dart';
+import 'package:t_store_app3/utils/constants/enums.dart';
 import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
 
 import '../../icons/t_circular_icon.dart';
 import '../../texts/product_title_text.dart';
+import '../../texts/t_brand_title_text_with_verified_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -85,29 +88,20 @@ class TProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwItems / 2),
-                      const Icon(Iconsax.verify5,
-                          color: TColors.primary, size: TSizes.iconXs),
-                    ],
-                  ),
+                  TBrandTitleWithVerifiedIcon(title: 'Nike',),
 
-                  const Spacer(),
+                  // const Spacer(),
 
                   /// Price row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      const TProductPriceText(
-                        price: '35.0',
+                      Padding(
+                        padding: const EdgeInsets.all(TSizes.sm),
+                        child: const TProductPriceText(
+                          price: '35.0',
+                        ),
                       ),
                       Container(
                         decoration: const BoxDecoration(
