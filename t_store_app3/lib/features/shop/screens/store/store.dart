@@ -74,8 +74,27 @@ class StoreScreen extends StatelessWidget {
                           itemCount: 4,
                           maxAxisExtent: 80,
                           itemBuilder: (_, index) {
-                            return const TBrandCard(
-                              showBorder: false,
+                            return GestureDetector(
+                              onTap: () {},
+                              child: TRoundedContainer(
+                                padding: const EdgeInsets.all(TSizes.sm),
+                                showBorder: true,
+                                backgroundColor: Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    // -- Icon
+                                    TCircularImage(
+                                      isNetworkImage: false,
+                                      image: TImages.clothIcon,
+                                      backgroundColor: Colors.transparent,
+                                      overlayColor:
+                                          THelperFunctions.isDarkMode(context)
+                                              ? TColors.white
+                                              : TColors.black,
+                                    ),
+                                  ],
+                                ),
+                              ),
                             );
                           }),
                     ],
