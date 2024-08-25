@@ -83,15 +83,38 @@ class StoreScreen extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     // -- Icon
-                                    TCircularImage(
-                                      isNetworkImage: false,
-                                      image: TImages.clothIcon,
-                                      backgroundColor: Colors.transparent,
-                                      overlayColor:
-                                          THelperFunctions.isDarkMode(context)
-                                              ? TColors.white
-                                              : TColors.black,
+                                    Flexible(
+                                      child: TCircularImage(
+                                        isNetworkImage: false,
+                                        image: TImages.clothIcon,
+                                        backgroundColor: Colors.transparent,
+                                        overlayColor:
+                                            THelperFunctions.isDarkMode(context)
+                                                ? TColors.white
+                                                : TColors.black,
+                                      ),
                                     ),
+                                    const SizedBox(
+                                      width: TSizes.spaceBtwItems / 2,
+                                    ),
+
+                                    /// -- Text
+                                    Expanded(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          const TBrandTitleWithVerifiedIcon(
+                                            title: 'Nike',
+                                            brandTextSize: TextSizes.large,
+                                          ),
+                                          Text(
+                                            '256 products with asjbsd si',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: Theme.of(context).textTheme.labelMedium,
+                                          ),
+                                        ],
+                                      ),),
                                   ],
                                 ),
                               ),
