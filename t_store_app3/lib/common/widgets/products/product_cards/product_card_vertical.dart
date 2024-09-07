@@ -3,9 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app3/common/styles/shadows.dart';
 import 'package:t_store_app3/common/widgets/containers/rounded_container.dart';
 import 'package:t_store_app3/common/widgets/images/t_rounded_image.dart';
-import 'package:t_store_app3/common/widgets/texts/t_brand_title_text.dart';
 import 'package:t_store_app3/utils/constants/colors.dart';
-import 'package:t_store_app3/utils/constants/enums.dart';
 import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
@@ -88,7 +86,7 @@ class TProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike',),
+                  const TBrandTitleWithVerifiedIcon(title: 'Nike',),
 
                   // const Spacer(),
 
@@ -97,9 +95,9 @@ class TProductCardVertical extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      Padding(
-                        padding: const EdgeInsets.all(TSizes.sm),
-                        child: const TProductPriceText(
+                      const Padding(
+                        padding: EdgeInsets.all(TSizes.sm),
+                        child: TProductPriceText(
                           price: '35.0',
                         ),
                       ),

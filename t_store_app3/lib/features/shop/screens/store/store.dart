@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:t_store_app3/common/widgets/appbar/appbar.dart';
 import 'package:t_store_app3/common/widgets/appbar/tabbar.dart';
 import 'package:t_store_app3/common/widgets/containers/rounded_container.dart';
@@ -16,8 +14,6 @@ import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
 
-import '../../../../common/widgets/brands/brand_card.dart';
-import '../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../common/widgets/images/t_circular_image.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -29,7 +25,7 @@ class StoreScreen extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: TAppBar(
-          title: Text('Store'),
+          title: const Text('Store'),
           actions: [
             TCartCounterIcon(iconColor: TColors.accent, onPressed: () {})
           ],
@@ -46,7 +42,7 @@ class StoreScreen extends StatelessWidget {
                     : TColors.white,
                 expandedHeight: 440,
                 flexibleSpace: Padding(
-                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  padding: const EdgeInsets.all(TSizes.defaultSpace),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -156,7 +152,7 @@ class StoreScreen extends StatelessWidget {
               )
             ];
           },
-          body: TabBarView(
+          body: const TabBarView(
             children: [
               TCategoryTab(),
               TCategoryTab(),

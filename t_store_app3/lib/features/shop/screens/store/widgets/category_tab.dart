@@ -23,12 +23,12 @@ class TCategoryTab extends StatelessWidget {
           child: Column(
             children: [
               /// -- Brands
-              TBrandShowcase(images: [
+              const TBrandShowcase(images: [
                 TImages.toyIcon,
                 TImages.clothIcon,
                 TImages.animalIcon,
               ]),
-              TBrandShowcase(images: [
+              const TBrandShowcase(images: [
                 TImages.toyIcon,
                 TImages.clothIcon,
                 TImages.animalIcon,

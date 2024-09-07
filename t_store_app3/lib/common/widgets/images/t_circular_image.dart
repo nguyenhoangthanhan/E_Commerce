@@ -41,7 +41,7 @@ class TCircularImage extends StatelessWidget {
         fit: fit,
         image: isNetworkImage
             ? NetworkImage(image)
-            : AssetImage(TImages.clothIcon) as ImageProvider,
+            : const AssetImage(TImages.clothIcon) as ImageProvider,
         color: overlayColor,
       ),
     );
