@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:t_store_app3/common/widgets/appbar/appbar.dart';
 import 'package:t_store_app3/common/widgets/appbar/tabbar.dart';
 import 'package:t_store_app3/common/widgets/containers/rounded_container.dart';
@@ -7,12 +9,15 @@ import 'package:t_store_app3/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store_app3/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:t_store_app3/common/widgets/texts/section_heading.dart';
 import 'package:t_store_app3/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
+import 'package:t_store_app3/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:t_store_app3/utils/constants/colors.dart';
 import 'package:t_store_app3/utils/constants/enums.dart';
 import 'package:t_store_app3/utils/constants/image_strings.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
 
+import '../../../../common/widgets/brands/brand_card.dart';
+import '../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../common/widgets/images/t_circular_image.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -51,9 +56,10 @@ class StoreScreen extends StatelessWidget {
                         height: TSizes.spaceBtwItems,
                       ),
                       const TSearchContainer(
-                        text: "",
+                        text: "Search in Store",
                         showBorder: true,
                         showBackground: false,
+                        padding: EdgeInsets.zero,
                       ),
                       const SizedBox(
                         height: TSizes.spaceBtwItems,
@@ -62,7 +68,6 @@ class StoreScreen extends StatelessWidget {
                       /// -- Featured Brands
                       TSectionHeading(
                         title: 'Feature Brands',
-                        showActionButton: true,
                         onPressed: () {},
                       ),
                       const SizedBox(
@@ -102,7 +107,8 @@ class StoreScreen extends StatelessWidget {
                                     Expanded(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           const TBrandTitleWithVerifiedIcon(
                                             title: 'Nike',
@@ -111,10 +117,13 @@ class StoreScreen extends StatelessWidget {
                                           Text(
                                             '256 products with asjbsd si',
                                             overflow: TextOverflow.ellipsis,
-                                            style: Theme.of(context).textTheme.labelMedium,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .labelMedium,
                                           ),
                                         ],
-                                      ),),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
@@ -147,106 +156,15 @@ class StoreScreen extends StatelessWidget {
               )
             ];
           },
-          body: TabBarView(children: [
-            Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: Column(
-                children: [
-                  /// -- Brands
-                  TRoundedContainer(
-                    showBorder: true,
-                    borderColor: TColors.darkGrey,
-                    backgroundColor: Colors.transparent,
-                    margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                    child: Column(
-                      children: [
-                        /// Brand with Products Count
-                        const TBrandCard(
-                          showBorder: false,
-                        ),
-
-                        /// Brand Top 3 Product ImagesPr
-                        Row(
-                          children: [
-                            TRoundedContainer(
-                              height: 100,
-                              backgroundColor:
-                                  THelperFunctions.isDarkMode(context)
-                                      ? TColors.darkGrey
-                                      : TColors.light,
-                              margin: const EdgeInsets.only(right: TSizes.sm),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-
-                  /// -- Products
-                ],
-              ),
-            )
-          ]),
-        ),
-      ),
-    );
-  }
-}
-
-class TBrandCard extends StatelessWidget {
-  const TBrandCard({
-    super.key,
-    required this.showBorder,
-    this.onTap,
-  });
-
-  final bool showBorder;
-  final void Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: TRoundedContainer(
-        padding: const EdgeInsets.all(TSizes.sm),
-        showBorder: showBorder,
-        backgroundColor: Colors.transparent,
-        child: Row(
-          children: [
-            /// - Icon
-            TCircularImage(
-              isNetworkImage: false,
-              image: TImages.clothIcon,
-              backgroundColor: Colors.transparent,
-              overlayColor: THelperFunctions.isDarkMode(context)
-                  ? TColors.white
-                  : TColors.black,
-            ),
-            const SizedBox(
-              width: TSizes.spaceBtwItems / 2,
-            ),
-
-            /// -- Text
-            /// [Expanded] & Colum [MainAxisSize.min] is important to keep the elements in the vertical center
-            /// and also to keep text inside the boundaries
-            Expanded(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const TBrandTitleWithVerifiedIcon(
-                    title: 'Nike',
-                    brandTextSize: TextSizes.large,
-                  ),
-                  Text(
-                    '256 products with abcabcabcabcabcabcabcabc',
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.labelMedium,
-                  )
-                ],
-              ),
-            )
-          ],
+          body: TabBarView(
+            children: [
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+            ],
+          ),
         ),
       ),
     );
