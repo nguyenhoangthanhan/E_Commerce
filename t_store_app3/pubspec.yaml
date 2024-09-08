@@ -108,6 +108,8 @@ flutter:
     - assets/icons/categories/
     - assets/images/animations/
     - assets/images/banners/
+    - assets/images/users/
+    - assets/images/products/
 
   fonts:
     - family:

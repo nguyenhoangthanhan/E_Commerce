@@ -15,10 +15,8 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
-      child: SizedBox(
-        height: 400,
-
-        /// -- If [size.isFinite': is not true.in Stack] error occurred
+      child: Container(
+        color: TColors.primary,
         child: Stack(
           children: [
             Positioned(
