@@ -4,6 +4,7 @@ import 'package:t_store_app3/common/widgets/products/product_cards/product_card_
 import 'package:t_store_app3/utils/constants/colors.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 
+import '../../../../../common/widgets/texts/product_title_text.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class TProductMetaData extends StatelessWidget {
@@ -57,12 +58,26 @@ class TProductMetaData extends StatelessWidget {
         const SizedBox(width: TSizes.spaceBtwItems / 1.5),
 
         /// -- Title
-
-
+        const TProductTitleText(
+          title: 'Green Nike sports shirt',
+        ),
+        const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
         /// -- Stock Status
+        Row(
+          children: [
+            const TProductTitleText(
+              title: 'Status',
+            ),
+            const SizedBox(height: TSizes.spaceBtwItems),
+            Text('In Stock', style: Theme.of(context).textTheme.titleMedium,),
+          ],
+        ),
+        const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
         /// -- Brand
+
+
       ],
     );
   }
