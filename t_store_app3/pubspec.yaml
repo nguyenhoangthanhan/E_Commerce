@@ -46,7 +46,11 @@ dependencies:
   logger: ^2.0.2+1
   flutter_native_splash: ^2.3.10
   smooth_page_indicator: ^1.1.0
+
+  # Product Specific
+  readmore: ^2.2.0
   carousel_slider: ^4.2.1
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
