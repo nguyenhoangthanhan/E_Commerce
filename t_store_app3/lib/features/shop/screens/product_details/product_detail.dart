@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:t_store_app3/common/widgets/texts/section_heading.dart';
@@ -7,6 +8,7 @@ import 'package:t_store_app3/features/shop/screens/product_details/widgets/produ
 import 'package:t_store_app3/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:t_store_app3/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store_app3/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:t_store_app3/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 
 import '../../../../utils/helpers/helper_functions.dart';
@@ -18,7 +20,7 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
-      bottomNavigationBar: TBottomAddToCart(),
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -27,7 +29,7 @@ class ProductDetailScreen extends StatelessWidget {
 
             /// 2 - Product Details
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 right: TSizes.defaultSpace,
                 left: TSizes.defaultSpace,
                 bottom: TSizes.defaultSpace,
@@ -35,13 +37,13 @@ class ProductDetailScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// -- Rating & share button
-                  TRatingAndShare(),
+                  const TRatingAndShare(),
 
                   /// -- Price, Title, Stock, & Brand
-                  TProductMetaData(),
+                  const TProductMetaData(),
 
                   /// -- Attributes
-                  TProductAttributes(),
+                  const TProductAttributes(),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// -- Checkout Button
@@ -49,7 +51,7 @@ class ProductDetailScreen extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: Text('Checkout'),
+                      child: const Text('Checkout'),
                     ),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
@@ -79,13 +81,19 @@ class ProductDetailScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TSectionHeading(title: 'Review(199)', onPressed: () {}, showActionButton: true),
+                      TSectionHeading(
+                        title: 'Review(199)',
+                        onPressed: () {
+                          Get.to(()=> const ProductReviewScreen());
+                        },
+                        showActionButton: true,
+                      ),
                       IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Iconsax.arrow_right3,
-                            size: 18,
-                          ),
+                        onPressed: () {},
+                        icon: const Icon(
+                          Iconsax.arrow_right3,
+                          size: 18,
+                        ),
                       ),
                     ],
                   ),
