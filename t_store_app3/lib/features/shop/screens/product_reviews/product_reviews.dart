@@ -1,15 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:t_store_app3/common/widgets/appbar/appbar.dart';
-import 'package:t_store_app3/features/shop/screens/product_reviews/widgets/progess_indicator_and_rating.dart';
 import 'package:t_store_app3/features/shop/screens/product_reviews/widgets/rating_progress_indicator.dart';
 import 'package:t_store_app3/features/shop/screens/product_reviews/widgets/user_review_card.dart';
-import 'package:t_store_app3/utils/constants/colors.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
-import 'package:t_store_app3/utils/devices/device_utility.dart';
 
 import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 import '../../../../utils/helpers/helper_functions.dart';
