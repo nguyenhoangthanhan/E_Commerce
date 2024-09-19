@@ -10,8 +10,10 @@ import '../../../../../utils/helpers/helper_functions.dart';
 
 class TCartItems extends StatelessWidget {
   const TCartItems({
-    super.key,
+    super.key, this.showAddRemoveButton = false,
   });
+
+  final bool showAddRemoveButton;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +26,10 @@ class TCartItems extends StatelessWidget {
         children: [
           /// Cart Item
           const TCartItem(),
-          const SizedBox(height: TSizes.spaceBtwItems),
+          if(showAddRemoveButton) const SizedBox(height: TSizes.spaceBtwItems),
 
           /// Add remove button row with total Price
-          Row(
+          if(showAddRemoveButton) Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
