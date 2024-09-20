@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store_app3/common/widgets/appbar/appbar.dart';
+import 'package:t_store_app3/features/shop/screens/checkout/checkout.dart';
+import 'package:t_store_app3/utils/constants/sizes.dart';
 import 'package:t_store_app3/utils/helpers/helper_functions.dart';
 
 import '../../../../common/widgets/products/cart/cart_item.dart';
@@ -29,6 +32,14 @@ class CartScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: TCartItem()
+      ),
+
+      /// Checkout button
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        child: ElevatedButton(
+          onPressed: () => Get.to(() => CheckoutScreen()), child: const Text('Checkout \$256.0'),
+        ),
       ),
     );
   }
