@@ -24,7 +24,6 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: TAppBar(
         title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall),
