@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:t_store_app3/common/widgets/containers/rounded_container.dart';
 import 'package:t_store_app3/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:t_store_app3/features/shop/screens/checkout/widgets/billing_payment_section.dart';
 import 'package:t_store_app3/utils/constants/colors.dart';
 import 'package:t_store_app3/utils/constants/sizes.dart';
 
@@ -40,7 +41,13 @@ class CheckoutScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     /// Pricing
+                    TBillingPaymentSection(),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+
                     /// Divider
+                    const Divider(),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+
                     /// Payments method
                     /// Address
                   ],

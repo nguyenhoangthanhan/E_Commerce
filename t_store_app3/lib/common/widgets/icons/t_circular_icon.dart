@@ -4,7 +4,7 @@ import 'package:t_store_app3/utils/constants/sizes.dart';
 import '../../../utils/constants/colors.dart';
 
 class TCircularIcon extends StatelessWidget {
-  /// Custom circular Icon widget with a background color.
+  /// Custom circular Icon widgets with a background color.
   ///
   /// Properties are:
   /// Container [width], [height], &[backgroundColor],
