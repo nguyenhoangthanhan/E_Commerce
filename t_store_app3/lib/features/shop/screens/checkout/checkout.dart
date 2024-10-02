@@ -49,6 +49,7 @@ class CheckoutScreen extends StatelessWidget {
                     const SizedBox(height: TSizes.spaceBtwItems),
 
                     /// Payments method
+                    ///
                     /// Address
                   ],
                 ),
