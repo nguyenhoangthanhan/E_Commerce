@@ -36,7 +36,8 @@ class CheckoutScreen extends StatelessWidget {
 
               /// -- Billing Section
               TRoundedContainer(
-                showBorder: true,
+                showBorder: true,3
+
                 backgroundColor: dark ? TColors.black : TColors.white,
                 child: Column(
                   children: [
